@@ -1,0 +1,69 @@
+<html>
+	<head>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<title>Krogci</title>
+		
+		<script>
+			var i=1;
+		
+			function getRandomInt(min,max) {
+  				return Math.floor(Math.random() * (max- min + 1)) + min;
+			}
+			function casPadanja(){
+				return getRandomInt(1,5)+'.'+getRandomInt(0,9);
+			}
+		
+			function dodajModro( barva) {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #3c6db5; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function dodajRdeco() {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #e75d5d; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function dodajRumeno() {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #5eb28f; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function dodajVijol() {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #6f3dcb; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function dodajRum() {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #f1a733; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function dodajBelo() {	
+			    document.getElementById("telo").innerHTML += '<div id='+i+' style="left:'+getRandomInt(1,99)+'%; background-color: #ffffff; animation-duration: '+casPadanja()+'s; -webkit-animation-duration: '+casPadanja()+'s;" class="rotacija"></div>';
+				i++;
+			}
+			function klik(){
+				for (i = 0; i < 300; i++) { 
+    				dodajModro();
+					dodajRdeco();
+					dodajBelo();
+					dodajRumeno();
+					dodajRum();
+					dodajVijol();
+					
+				}
+			}
+</script>
+		 
+	</head>
+	<body>
+		<button type="button" onclick="dodajModro()" class="gumb">Modra</button>
+		<button type="button" onclick="dodajRdeco()" class="gumb1">Rdeca</button>
+		<button type="button" onclick="dodajRumeno()" class="gumb2">Zelena</button>
+		<button type="button" onclick="dodajVijol()" class="gumb3">Vijolicna</button>
+		<button type="button" onclick="dodajRum()" class="gumb4">Rumena</button>
+		<button type="button" onclick="dodajBelo()" class="gumb5">Bela</button>
+			<button type="button" onclick="klik()" class="gumb6">Neomejeno</button>
+		<div id="telo">
+		
+			
+		</div>
+	</body>
+</html>
